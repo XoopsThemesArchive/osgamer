@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<{$xoops_langcode}>" lang="<{$xoops_langcode}>">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=<{$xoops_charset}>" />
+<meta http-equiv="content-language" content="<{$xoops_langcode}>" />
+<meta name="robots" content="<{$xoops_meta_robots}>" />
+<meta name="keywords" content="<{$xoops_meta_keywords}>" />
+<meta name="description" content="<{$xoops_meta_description}>" />
+<meta name="rating" content="<{$xoops_meta_rating}>" />
+<meta name="author" content="<{$xoops_meta_author}>" />
+<meta name="copyright" content="<{$xoops_meta_copyright}>" />
+<meta name="generator" content="XOOPS" />
+<title><{$xoops_sitename}> - <{$xoops_pagetitle}></title>
+<link href="<{$xoops_url}>/favicon.ico" rel="SHORTCUT ICON" />
+<link rel="stylesheet" type="text/css" media="screen" href="<{$xoops_url}>/xoops.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="<{$xoops_themecss}>" />
+<link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+<!-- RMV: added module header -->
+<{$xoops_module_header}>
+<script type="text/javascript">
+<!--
+<{$xoops_js}>
+//-->
+</script>
+</head>
+
+<body>
+<a style="color:#FFFFFF" href="http://www.osgamer.org">osgamer</a><a style="color:#FFFFFF" href="http://www.omnetwork.net">omnetwork.net</a>
+<table class="subbody" border="0" cellspacing="0" cellpadding="0">
+  <tr >
+    <td><table class="header" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td id="leftHeader"><img src="/themes/<{$xoops_theme}>/images/header.gif" width="419" height="86" />
+          <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="300" height="37">
+            <param name="movie" value="/themes/<{$xoops_theme}>/headlines.swf" />
+            <param name="quality" value="high" />
+            <embed src="/themes/<{$xoops_theme}>/headlines.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="300" height="37"></embed>
+          </object></td>
+        <td id="rightHeader"><img src="/themes/<{$xoops_theme}>/images/right.gif" width="12" height="86" /></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td width="100%" >
+	
+	<table class="100width" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td id="leftSection">
+		<table class="100width" border="0" cellspacing="0" cellpadding="0">
+		<tr>
+			<td class="leftColumn" ><{if $xoops_showlblock == 1}> 
+<{foreach item=block from=$xoops_lblocks}> <{include file="$xoops_theme/theme_blockleft.html"}> &nbsp; <{/foreach}> 
+<{/if}></td>
+		</tr>
+		<tr>
+			<td class="donjaLinija"><img src="/themes/<{$xoops_theme}>/images/d_corner.gif" width="13" height="13" /></td>
+		</tr>
+		</table>&nbsp;</td>
+        <td id="mainSection">
+		<table class="100width" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td class="centralColumn" width="100%"><table class="100width" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td id="mainContent" ><table class="100width" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td valign="top"><{if $xoops_clblocks}> 
+<{foreach item=block from=$xoops_clblocks}> <{include file="$xoops_theme/theme_blockcenter_l.html"}>&nbsp; <{/foreach}> 
+<{/if}></td>
+                    <td class="BlockDivider" valign="top">&nbsp;</td>
+                    <td valign="top"><{if $xoops_crblocks}> 
+<{foreach item=block from=$xoops_crblocks}> <{include file="$xoops_theme/theme_blockcenter_r.html"}>&nbsp; <{/foreach}> 
+<{/if}></td>
+                    </tr>
+                  <tr>
+                    <td class="contentBox" colspan="3" valign="top"><{if $xoops_contents}> 
+<{$xoops_contents}>
+<{/if}></td>
+                    </tr>
+                  <tr>
+                    <td colspan="3" valign="top"><{if $xoops_ccblocks}> 
+<{foreach item=block from=$xoops_ccblocks}> <{include file="$xoops_theme/theme_blockcenter_c.html"}> <{/foreach}> 
+<{/if}> </td>
+                  </tr>
+                  <{if $xoBlocks.page_bottomleft or $xoBlocks.page_bottomright}> 
+				  <tr>
+                    <td valign="top"><{foreach from=$xoBlocks.page_bottomleft item=block}> <{include file="$xoops_theme/theme_blockcenter_l.html"}> &nbsp;<{/foreach}> 
+&nbsp;</td>
+                    <td class="BlockDivider" valign="top">&nbsp;</td>
+                    <td valign="top"><{foreach from=$xoBlocks.page_bottomright item=block}> <{include file="$xoops_theme/theme_blockcenter_r.html"}>&nbsp; <{/foreach}> &nbsp;</td>
+                  </tr>
+				  <{/if}> 
+                </table></td>
+                <td id="rightContent" ><{if $xoops_showrblock == 1}> 
+<{foreach item=block from=$xoops_rblocks}> <{include file="$xoops_theme/theme_blockright.html"}> &nbsp; <{/foreach}> 
+<{/if}> &nbsp;</td>
+              </tr>
+            </table></td>
+          </tr>
+          <tr>
+            <td class="donjaLinija"><img src="/themes/<{$xoops_theme}>/images/d_corner.gif" width="13" height="13" /></td>
+          </tr>
+        </table></td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+<br />
+<a href="http://www.omnetwork.net">project of omnetwork.net</a>
+</body>
+</html>
